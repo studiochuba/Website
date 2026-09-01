@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Studio Chuba — Funnels that convert</title>
-<link rel="icon" type="image/x-icon" href=" Favicon/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32.png">
-<link rel="icon" type="image/png" sizes="48x48" href="Favicon/favicon-48.png">
-<link rel="icon" type="image/png" sizes="192x192" href="Favicon/favicon-192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="Favicon/favicon-180.png">
+<title>Studio Chuba — Build better. Look premium. Sell smarter.</title>
+<link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon/favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -132,6 +132,37 @@
   .burger span{width:24px;height:2.5px;background:var(--plum-dark);border-radius:2px;}
 
   .mobile-panel{display:none;}
+  /* ---------- floating project CTA ---------- */
+  .floating-project{
+    position:fixed;
+    right:28px;
+    top:50%;
+    z-index:150;
+    transform:translateY(-50%);
+    box-shadow:0 14px 30px -16px rgba(53,42,57,.55);
+    animation:floatProject 3.2s ease-in-out infinite;
+  }
+  .floating-project:hover{
+    transform:translateY(calc(-50% - 3px));
+  }
+  @keyframes floatProject{
+    0%,100%{transform:translateY(-50%);}
+    50%{transform:translateY(calc(-50% - 10px));}
+  }
+  @media (max-width:900px){
+    .floating-project{
+      right:16px;
+      top:auto;
+      bottom:18px;
+      transform:none;
+      animation:floatProjectMobile 3.2s ease-in-out infinite;
+    }
+    .floating-project:hover{transform:translateY(-3px);}
+  }
+  @keyframes floatProjectMobile{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+  }
 
   @media (max-width:900px){
     nav.primary-nav, .nav-cta .btn-ghost{display:none;}
@@ -207,11 +238,33 @@
   .section-alt{background:var(--cream-dim);}
   .section-head{max-width:64ch;margin-bottom:44px;}
   .section-head h2{font-size:clamp(28px,3.4vw,40px);line-height:1.12;}
-  .section-head p{margin-top:14px;font-size:17px;color:var(--plum-dark);} 
+  .section-head p{margin-top:14px;font-size:17px;color:var(--plum-dark);}
+
+  /* ---------- what we do ---------- */
+  .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .cat-card{
+    background:var(--cream);
+    border:1.5px solid var(--plum-tint);
+    border-radius:var(--radius-md);
+    padding:26px 22px;
+    scroll-margin-top:110px;
+    transition:border-color .2s ease, transform .2s ease;
+  }
+  .cat-card:hover{border-color:var(--plum);transform:translateY(-4px);}
+  .cat-icon{width:46px;height:46px;border-radius:14px;background:var(--plum-tint);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+  .cat-icon svg{width:24px;height:24px;stroke:var(--plum-dark);}
+  .cat-card h3{font-size:19px;margin-bottom:8px;}
+  .cat-card p{font-size:14.5px;color:var(--plum-soft);}
+  .flash{animation:flashcard 1.4s ease;}
+  @keyframes flashcard{
+    0%{background:var(--plum-tint);}
+    100%{background:var(--cream);}
+  }
 
   /* ---------- templates ---------- */
   .tpl-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
   .tpl-card{
+    display:block;
     border-radius:var(--radius-md);
     overflow:hidden;
     border:1.5px solid var(--plum-tint);
@@ -227,6 +280,23 @@
   .tpl-body .k{font-size:12.5px;font-weight:700;color:var(--plum-soft);}
   .tpl-body h3{font-size:18px;margin-top:4px;}
   .tpl-body p{font-size:14px;color:var(--plum-soft);margin-top:6px;}
+
+  /* ---------- pricing ---------- */
+  .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .price-card{background:var(--cream);border:1.5px solid var(--plum-tint);border-radius:var(--radius-md);padding:28px 24px;display:flex;flex-direction:column;}
+  .price-card.mid{background:var(--plum-dark);border-color:var(--plum-dark);}
+  .price-card.mid *{color:var(--cream) !important;}
+  .price-level{font-size:12.5px;font-weight:700;color:var(--plum-soft);}
+  .price-card h3{font-size:20px;margin-top:6px;}
+  .price-range{font-family:'Fredoka',sans-serif;font-size:25px;color:var(--plum-dark);margin-top:12px;}
+  .price-desc{font-size:14.5px;color:var(--plum-soft);margin-top:10px;}
+
+  .flow-strip{margin-top:52px;border-top:1.5px solid var(--plum-tint);padding-top:34px;}
+  .flow-strip .flabel{font-size:13px;font-weight:700;color:var(--plum-soft);margin-bottom:18px;}
+  .flow-steps{display:flex;align-items:center;gap:0;flex-wrap:wrap;}
+  .flow-step{background:var(--cream);border:1.5px solid var(--plum-tint);border-radius:16px;padding:14px 18px;font-size:14px;font-weight:600;color:var(--plum-dark);max-width:220px;}
+  .flow-arrow{width:26px;height:2px;background:var(--plum-tint);position:relative;flex:0 0 26px;margin:0 2px;}
+  .flow-arrow::after{content:"";position:absolute;right:-1px;top:-4px;border-left:6px solid var(--plum-tint);border-top:5px solid transparent;border-bottom:5px solid transparent;}
 
   /* ---------- services ---------- */
   .svc-list{display:flex;flex-direction:column;border-top:1.5px solid var(--plum-tint);}
@@ -296,12 +366,70 @@
     .pf-grid,.res-grid{grid-template-columns:repeat(2,1fr);}
     .svc-row{grid-template-columns:1fr;gap:12px;}
     .contact-grid{grid-template-columns:1fr;gap:40px;}
+    .price-grid{grid-template-columns:1fr;}
+    .flow-steps{flex-direction:column;align-items:flex-start;}
+    .flow-arrow{width:2px;height:22px;margin:2px 0 2px 20px;}
+    .flow-arrow::after{right:-4px;top:auto;bottom:-1px;left:auto;border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid var(--plum-tint);}
+    .flow-step{max-width:100%;}
   }
   @media (max-width:600px){
     .cat-grid,.tpl-grid,.pf-grid,.res-grid{grid-template-columns:1fr;}
     .cform .two{grid-template-columns:1fr;}
     .section{padding:60px 0;}
     .hero{padding:52px 0 40px;}
+  }
+
+  /* ---------- floating project button ---------- */
+  .floating-project-btn{
+    position:fixed;
+    right:24px;
+    bottom:24px;
+    z-index:9999;
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding:13px 18px 13px 15px;
+    background:var(--plum-dark);
+    color:var(--cream);
+    border:1.5px solid rgba(255,249,239,.18);
+    border-radius:999px;
+    box-shadow:0 12px 30px rgba(53,42,57,.25);
+    font-family:'Manrope',sans-serif;
+    font-size:14px;
+    font-weight:800;
+    white-space:nowrap;
+    transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+    animation:floatProject 3s ease-in-out infinite;
+  }
+  .floating-project-btn::before{
+    content:"";
+    width:9px;
+    height:9px;
+    border-radius:50%;
+    background:var(--cream);
+    box-shadow:0 0 0 4px rgba(255,249,239,.12);
+  }
+  .floating-project-btn:hover{
+    background:var(--plum);
+    transform:translateY(-4px) scale(1.02);
+    box-shadow:0 16px 36px rgba(53,42,57,.32);
+    animation-play-state:paused;
+  }
+  .floating-project-btn:active{transform:translateY(-1px) scale(.99);}
+  @keyframes floatProject{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-6px);}
+  }
+  @media (max-width:600px){
+    .floating-project-btn{
+      right:16px;
+      bottom:16px;
+      padding:12px 16px 12px 14px;
+      font-size:13.5px;
+    }
+  }
+  @media (prefers-reduced-motion:reduce){
+    .floating-project-btn{animation:none;}
   }
 </style>
 </head>
@@ -312,7 +440,17 @@
     <a href="#home" class="wordmark">studio<span>chuba</span></a>
 
     <nav class="primary-nav" aria-label="Primary">
-      <div class="nav-item"><a class="nav-link" href="#home">Home</a></div> 
+      <div class="nav-item"><a class="nav-link" href="#home">Home</a></div>
+
+      <div class="nav-item">
+        <button class="nav-link" aria-expanded="false" data-dd="wwd">What We Do <span class="caret"></span></button>
+        <div class="dropdown" data-dd-panel="wwd">
+          <a href="#wwd-beauty">Beauty</a>
+          <a href="#wwd-realestate">Real Estate</a>
+          <a href="#wwd-cars">Cars</a>
+          <a href="#wwd-digital">Digital Products</a>
+        </div>
+      </div>
 
       <div class="nav-item">
         <button class="nav-link" aria-expanded="false" data-dd="tpl">Templates <span class="caret"></span></button>
@@ -334,13 +472,13 @@
         </div>
       </div>
 
+      <div class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></div>
       <div class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></div>
       <div class="nav-item"><a class="nav-link" href="#resources">Resources</a></div>
     </nav>
 
     <div class="nav-cta">
       <a href="#contact" class="btn btn-ghost">Contact</a>
-      <a href="#contact" class="btn btn-primary">Start a project</a>
       <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -349,7 +487,15 @@
 
   <div class="mobile-panel" id="mobilePanel">
     <div class="wrap">
-      <a class="m-top" href="#home">Home</a> 
+      <a class="m-top" href="#home">Home</a>
+
+      <button class="m-top" data-msub="wwd" aria-expanded="false">What We Do <span class="m-caret"></span></button>
+      <div class="m-sub" data-msub-panel="wwd">
+        <a href="#wwd-beauty">Beauty</a>
+        <a href="#wwd-realestate">Real Estate</a>
+        <a href="#wwd-cars">Cars</a>
+        <a href="#wwd-digital">Digital Products</a>
+      </div>
 
       <button class="m-top" data-msub="tpl" aria-expanded="false">Templates <span class="m-caret"></span></button>
       <div class="m-sub" data-msub-panel="tpl">
@@ -367,6 +513,7 @@
         <a href="#svc-funnel-setup">Funnel Setup</a>
       </div>
 
+      <a class="m-top" href="#pricing">Pricing</a>
       <a class="m-top" href="#portfolio">Portfolio</a>
       <a class="m-top" href="#resources">Resources</a>
       <a class="m-top" href="#contact">Contact</a>
@@ -374,6 +521,8 @@
     </div>
   </div>
 </header>
+
+<a href="#contact" class="floating-project-btn" aria-label="Start a project">Start a project <span aria-hidden="true">→</span></a>
 
 <main>
 
@@ -387,8 +536,8 @@
           <span class="pill">Cars</span>
           <span class="pill">Digital Products</span>
         </div>
-        <h1>We build funnels people actually walk through.</h1>
-        <p class="hero-lead">Studio Chuba designs and builds the pages, flows, and follow-ups that turn visitors into booked clients, listed leads, and paying customers — built for how your industry actually sells.</p>
+        <h1>Build better. Look premium. Sell smarter.</h1>
+        <p class="hero-lead">Studio Chuba is four specialized departments under one studio — Beauty, Real Estate, Cars, and Digital — each built to fix the one thing costing that industry sales: poor presentation, scattered leads, hard-to-browse inventory, or no way to package what you know.</p>
         <div class="hero-actions">
           <a href="#portfolio" class="btn btn-primary">See our work</a>
           <a href="#contact" class="btn btn-ghost">Start a project</a>
@@ -406,17 +555,49 @@
         </div>
       </div>
     </div>
-  </section> 
+  </section>
+
+  <!-- WHAT WE DO -->
+  <section class="section section-alt" id="what-we-do">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Four branches, one studio</h2>
+        <p>Each branch is built around one industry's actual sales problem — not a generic website template.</p>
+      </div>
+      <div class="cat-grid">
+        <div class="cat-card" id="wwd-beauty">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 3c2 3 4 5 4 8a4 4 0 0 1-8 0c0-3 2-5 4-8Z"/><path d="M8 19h8"/></svg></div>
+          <h3>Beauty</h3>
+          <p>For skincare brands, salons, and lash and makeup artists whose online presence undersells them. We build sales and booking funnels that fill calendars, not just collect emails.</p>
+        </div>
+        <div class="cat-card" id="wwd-realestate">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 11 12 4l8 7"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/></svg></div>
+          <h3>Real Estate</h3>
+          <p>For realtors, developers, and property companies whose leads are scattered across social media. We build property lead funnels that qualify buyers before they ever call.</p>
+        </div>
+        <div class="cat-card" id="wwd-cars">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 16V12l2-5h12l2 5v4"/><circle cx="7.5" cy="16.5" r="1.5"/><circle cx="16.5" cy="16.5" r="1.5"/></svg></div>
+          <h3>Cars</h3>
+          <p>For dealers and importers whose buyers can't easily view or ask about inventory. We build car sales funnels that turn listings into enquiries.</p>
+        </div>
+        <div class="cat-card" id="wwd-digital">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h5"/></svg></div>
+          <h3>Digital Products</h3>
+          <p>For creators and small businesses who don't know how to package or sell what they know. We build digital products and templates they can sell on repeat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- TEMPLATES -->
   <section class="section" id="templates">
     <div class="wrap">
       <div class="section-head">
         <h2>Templates</h2>
-        <p>Ready-built funnel and page templates, based on what's already converting in each industry. Start from a working foundation instead of a blank page.</p>
+        <p>Ready-built funnel and page templates, based on what's already converting in each industry. Buy one and edit it yourself, or have us take it further — see how that works below.</p>
       </div>
       <div class="tpl-grid">
-        <div class="tpl-card" id="tpl-beauty">
+        <a class="tpl-card" id="tpl-beauty" href="beauty.html">
           <div class="tpl-preview" style="background:linear-gradient(160deg,#E9D9DE,#C9A6B4);">
             <div class="bar"><span></span><span></span><span></span></div>
           </div>
@@ -425,7 +606,7 @@
             <h3>Beauty</h3>
             <p>Booking-first layout with before/after gallery and service tiers.</p>
           </div>
-        </div>
+        </a>
         <div class="tpl-card" id="tpl-realestate">
           <div class="tpl-preview" style="background:linear-gradient(160deg,#DCE3D8,#A9BFA0);">
             <div class="bar"><span></span><span></span><span></span></div>
@@ -460,12 +641,55 @@
     </div>
   </section>
 
+  <!-- PRICING -->
+  <section class="section" id="pricing">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Three ways to work with us</h2>
+        <p>Every branch works the same way — start with a template, have us customize it, or hand us the whole build.</p>
+      </div>
+      <div class="price-grid">
+        <div class="price-card">
+          <span class="price-level">LEVEL 1</span>
+          <h3>Templates</h3>
+          <div class="price-range">₦5,000–₦30,000</div>
+          <p class="price-desc">Buy a ready-made funnel and edit it yourself. Good if you just need a strong starting point.</p>
+        </div>
+        <div class="price-card mid">
+          <span class="price-level">LEVEL 2</span>
+          <h3>Customized</h3>
+          <div class="price-range">₦50,000–₦150,000</div>
+          <p class="price-desc">We take a template and rebuild it around your business — your photos, your offer, your brand.</p>
+        </div>
+        <div class="price-card">
+          <span class="price-level">LEVEL 3</span>
+          <h3>Done-for-you</h3>
+          <div class="price-range">₦150,000–₦500,000+</div>
+          <p class="price-desc">We build the entire funnel from scratch — copy, forms, WhatsApp, payment — and launch it for you.</p>
+        </div>
+      </div>
+
+      <div class="flow-strip">
+        <div class="flabel">HOW IT USUALLY STARTS</div>
+        <div class="flow-steps">
+          <div class="flow-step">Someone finds a Studio Chuba template online</div>
+          <div class="flow-arrow"></div>
+          <div class="flow-step">They buy it and try it themselves</div>
+          <div class="flow-arrow"></div>
+          <div class="flow-step">They ask us to customize it for their business</div>
+          <div class="flow-arrow"></div>
+          <div class="flow-step">They become a done-for-you client</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SERVICES -->
   <section class="section section-alt" id="services">
     <div class="wrap">
       <div class="section-head">
         <h2>Services</h2>
-        <p>From a single landing page to a full funnel rebuild, here's what we take on.</p>
+        <p>From a single landing page to a full funnel rebuild — each available as a template, a customization, or a done-for-you build.</p>
       </div>
       <div class="svc-list">
         <div class="svc-row" id="svc-custom-funnels">
@@ -574,8 +798,10 @@
         <p class="contact-lead">Tell us what you sell and who you sell it to. We'll follow up with next steps within one business day.</p>
         <div class="contact-detail">
           <div class="row"><span class="k">EMAIL</span><span class="v">hello@studiochuba.com</span></div>
+          <div class="row"><span class="k">WHATSAPP</span><span class="v">+234 800 000 0000</span></div>
           <div class="row"><span class="k">RESPONSE TIME</span><span class="v">Within 1 business day</span></div>
         </div>
+        <a href="#" class="btn btn-ghost-onplum" style="margin-top:24px;">Message us on WhatsApp</a>
       </div>
       <form class="cform" onsubmit="event.preventDefault();">
         <div class="two">
@@ -612,8 +838,10 @@
 <footer>
   <div class="wrap foot-grid">
     <a href="#home" class="wordmark foot-wordmark">studio chuba</a>
-    <div class="foot-links"> 
+    <div class="foot-links">
+      <a href="#what-we-do">What We Do</a>
       <a href="#templates">Templates</a>
+      <a href="#pricing">Pricing</a>
       <a href="#services">Services</a>
       <a href="#portfolio">Portfolio</a>
       <a href="#resources">Resources</a>
@@ -686,4 +914,4 @@
 </script>
 
 </body>
-</html> 
+</html>
