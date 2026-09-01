@@ -208,28 +208,7 @@
   .section-head{max-width:64ch;margin-bottom:44px;}
   .section-head h2{font-size:clamp(28px,3.4vw,40px);line-height:1.12;}
   .section-head p{margin-top:14px;font-size:17px;color:var(--plum-dark);}
-
-  /* ---------- what we do ---------- */
-  .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
-  .cat-card{
-    background:var(--cream);
-    border:1.5px solid var(--plum-tint);
-    border-radius:var(--radius-md);
-    padding:26px 22px;
-    scroll-margin-top:110px;
-    transition:border-color .2s ease, transform .2s ease;
-  }
-  .cat-card:hover{border-color:var(--plum);transform:translateY(-4px);}
-  .cat-icon{width:46px;height:46px;border-radius:14px;background:var(--plum-tint);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
-  .cat-icon svg{width:24px;height:24px;stroke:var(--plum-dark);}
-  .cat-card h3{font-size:19px;margin-bottom:8px;}
-  .cat-card p{font-size:14.5px;color:var(--plum-soft);}
-  .flash{animation:flashcard 1.4s ease;}
-  @keyframes flashcard{
-    0%{background:var(--plum-tint);}
-    100%{background:var(--cream);}
-  }
-
+ 
   /* ---------- templates ---------- */
   .tpl-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
   .tpl-card{
@@ -356,17 +335,7 @@
     <a href="#home" class="wordmark">studio<span>chuba</span></a>
 
     <nav class="primary-nav" aria-label="Primary">
-      <div class="nav-item"><a class="nav-link" href="#home">Home</a></div>
-
-      <div class="nav-item">
-        <button class="nav-link" aria-expanded="false" data-dd="wwd">What We Do <span class="caret"></span></button>
-        <div class="dropdown" data-dd-panel="wwd">
-          <a href="#wwd-beauty">Beauty</a>
-          <a href="#wwd-realestate">Real Estate</a>
-          <a href="#wwd-cars">Cars</a>
-          <a href="#wwd-digital">Digital Products</a>
-        </div>
-      </div>
+      <div class="nav-item"><a class="nav-link" href="#home">Home</a></div> 
 
       <div class="nav-item">
         <button class="nav-link" aria-expanded="false" data-dd="tpl">Templates <span class="caret"></span></button>
@@ -403,15 +372,7 @@
 
   <div class="mobile-panel" id="mobilePanel">
     <div class="wrap">
-      <a class="m-top" href="#home">Home</a>
-
-      <button class="m-top" data-msub="wwd" aria-expanded="false">What We Do <span class="m-caret"></span></button>
-      <div class="m-sub" data-msub-panel="wwd">
-        <a href="#wwd-beauty">Beauty</a>
-        <a href="#wwd-realestate">Real Estate</a>
-        <a href="#wwd-cars">Cars</a>
-        <a href="#wwd-digital">Digital Products</a>
-      </div>
+      <a class="m-top" href="#home">Home</a> 
 
       <button class="m-top" data-msub="tpl" aria-expanded="false">Templates <span class="m-caret"></span></button>
       <div class="m-sub" data-msub-panel="tpl">
@@ -436,6 +397,7 @@
     </div>
   </div>
 </header> 
+
 <a href="#contact" class="floating-project-btn" aria-label="Start a project">Start a project <span aria-hidden="true">→</span></a>
 
 <main>
@@ -470,38 +432,7 @@
       </div>
     </div>
   </section>
-
-  <!-- WHAT WE DO -->
-  <section class="section section-alt" id="what-we-do">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Four branches, one studio</h2>
-        <p>Each branch is built around one industry's actual sales problem — not a generic website template.</p>
-      </div>
-      <div class="cat-grid">
-        <div class="cat-card" id="wwd-beauty">
-          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 3c2 3 4 5 4 8a4 4 0 0 1-8 0c0-3 2-5 4-8Z"/><path d="M8 19h8"/></svg></div>
-          <h3>Beauty</h3>
-          <p>For skincare brands, salons, and lash and makeup artists whose online presence undersells them. We build sales and booking funnels that fill calendars, not just collect emails.</p>
-        </div>
-        <div class="cat-card" id="wwd-realestate">
-          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 11 12 4l8 7"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/></svg></div>
-          <h3>Real Estate</h3>
-          <p>For realtors, developers, and property companies whose leads are scattered across social media. We build property lead funnels that qualify buyers before they ever call.</p>
-        </div>
-        <div class="cat-card" id="wwd-cars">
-          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 16V12l2-5h12l2 5v4"/><circle cx="7.5" cy="16.5" r="1.5"/><circle cx="16.5" cy="16.5" r="1.5"/></svg></div>
-          <h3>Cars</h3>
-          <p>For dealers and importers whose buyers can't easily view or ask about inventory. We build car sales funnels that turn listings into enquiries.</p>
-        </div>
-        <div class="cat-card" id="wwd-digital">
-          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h5"/></svg></div>
-          <h3>Digital Products</h3>
-          <p>For creators and small businesses who don't know how to package or sell what they know. We build digital products and templates they can sell on repeat.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+ 
 
   <!-- TEMPLATES -->
   <section class="section" id="templates">
@@ -752,8 +683,7 @@
 <footer>
   <div class="wrap foot-grid">
     <a href="#home" class="wordmark foot-wordmark">studio chuba</a>
-    <div class="foot-links">
-      <a href="#what-we-do">What We Do</a>
+    <div class="foot-links"> 
       <a href="#templates">Templates</a>
       <a href="#pricing">Pricing</a>
       <a href="#services">Services</a>
