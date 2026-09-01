@@ -84,6 +84,46 @@
   .btn-ghost-onplum{background:transparent;color:var(--cream);border-color:rgba(255,249,239,.55);}
   .btn-ghost-onplum:hover{background:rgba(255,249,239,.12);border-color:var(--cream);}
 
+  /* ---------- floating CTA ---------- */
+.floating-project-btn{
+  position:fixed;
+  right:28px;
+  bottom:28px;
+  z-index:200;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:15px 26px;
+  border-radius:999px;
+  background:var(--plum-dark);
+  color:var(--cream);
+  font-family:'Manrope',sans-serif;
+  font-weight:700;
+  font-size:15px;
+  box-shadow:0 14px 30px -10px rgba(53,42,57,.5);
+  transition:transform .18s ease, background .18s ease, box-shadow .18s ease;
+}
+.floating-project-btn:hover{
+  background:var(--plum);
+  transform:translateY(-3px);
+  box-shadow:0 18px 36px -10px rgba(53,42,57,.55);
+}
+.floating-project-btn span{
+  transition:transform .18s ease;
+}
+.floating-project-btn:hover span{
+  transform:translateX(3px);
+}
+
+@media (max-width:600px){
+  .floating-project-btn{
+    right:16px;
+    bottom:16px;
+    padding:13px 20px;
+    font-size:14px;
+  }
+}
+
   /* ---------- nav ---------- */
   header{
     position:sticky;top:0;z-index:100;
@@ -397,9 +437,7 @@
     </div>
   </div>
 </header> 
-
-<a href="#contact" class="floating-project-btn" aria-label="Start a project">Start a project <span aria-hidden="true">→</span></a>
-
+ 
 <main>
 
   <!-- HOME -->
