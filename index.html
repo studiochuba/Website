@@ -131,38 +131,7 @@
   .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;}
   .burger span{width:24px;height:2.5px;background:var(--plum-dark);border-radius:2px;}
 
-  .mobile-panel{display:none;}
-  /* ---------- floating project CTA ---------- */
-  .floating-project{
-    position:fixed;
-    right:28px;
-    top:50%;
-    z-index:150;
-    transform:translateY(-50%);
-    box-shadow:0 14px 30px -16px rgba(53,42,57,.55);
-    animation:floatProject 3.2s ease-in-out infinite;
-  }
-  .floating-project:hover{
-    transform:translateY(calc(-50% - 3px));
-  }
-  @keyframes floatProject{
-    0%,100%{transform:translateY(-50%);}
-    50%{transform:translateY(calc(-50% - 10px));}
-  }
-  @media (max-width:900px){
-    .floating-project{
-      right:16px;
-      top:auto;
-      bottom:18px;
-      transform:none;
-      animation:floatProjectMobile 3.2s ease-in-out infinite;
-    }
-    .floating-project:hover{transform:translateY(-3px);}
-  }
-  @keyframes floatProjectMobile{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-8px);}
-  }
+  .mobile-panel{display:none;} 
 
   @media (max-width:900px){
     nav.primary-nav, .nav-cta .btn-ghost{display:none;}
@@ -377,60 +346,7 @@
     .cform .two{grid-template-columns:1fr;}
     .section{padding:60px 0;}
     .hero{padding:52px 0 40px;}
-  }
-
-  /* ---------- floating project button ---------- */
-  .floating-project-btn{
-    position:fixed;
-    right:24px;
-    bottom:24px;
-    z-index:9999;
-    display:inline-flex;
-    align-items:center;
-    gap:9px;
-    padding:13px 18px 13px 15px;
-    background:var(--plum-dark);
-    color:var(--cream);
-    border:1.5px solid rgba(255,249,239,.18);
-    border-radius:999px;
-    box-shadow:0 12px 30px rgba(53,42,57,.25);
-    font-family:'Manrope',sans-serif;
-    font-size:14px;
-    font-weight:800;
-    white-space:nowrap;
-    transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
-    animation:floatProject 3s ease-in-out infinite;
-  }
-  .floating-project-btn::before{
-    content:"";
-    width:9px;
-    height:9px;
-    border-radius:50%;
-    background:var(--cream);
-    box-shadow:0 0 0 4px rgba(255,249,239,.12);
-  }
-  .floating-project-btn:hover{
-    background:var(--plum);
-    transform:translateY(-4px) scale(1.02);
-    box-shadow:0 16px 36px rgba(53,42,57,.32);
-    animation-play-state:paused;
-  }
-  .floating-project-btn:active{transform:translateY(-1px) scale(.99);}
-  @keyframes floatProject{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-6px);}
-  }
-  @media (max-width:600px){
-    .floating-project-btn{
-      right:16px;
-      bottom:16px;
-      padding:12px 16px 12px 14px;
-      font-size:13.5px;
-    }
-  }
-  @media (prefers-reduced-motion:reduce){
-    .floating-project-btn{animation:none;}
-  }
+  } 
 </style>
 </head>
 <body>
@@ -516,12 +432,10 @@
       <a class="m-top" href="#pricing">Pricing</a>
       <a class="m-top" href="#portfolio">Portfolio</a>
       <a class="m-top" href="#resources">Resources</a>
-      <a class="m-top" href="#contact">Contact</a>
-      <a href="#contact" class="btn btn-primary m-cta">Start a project</a>
+      <a class="m-top" href="#contact">Contact</a> 
     </div>
   </div>
-</header>
-
+</header> 
 <a href="#contact" class="floating-project-btn" aria-label="Start a project">Start a project <span aria-hidden="true">→</span></a>
 
 <main>

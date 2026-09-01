@@ -3,24 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Studio Chuba — Funnels, landing pages &amp; websites built to convert</title>
+<title>Studio Chuba — Build better. Look premium. Sell smarter.</title>
+<link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon/favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
     --cream:#FFF9EF;
-    --cream-soft:#FFFDF9;
+    --cream-dim:#F3ECDD;
     --plum:#705575;
-    --plum-deep:#4A3B4E;
-    --plum-mid:#8B6E8F;
-    --plum-tint:#EAE1E9;
-    --plum-tint-2:#F3ECF2;
-    --ink:#2B2230;
-    --ink-soft:#5B4E60;
-    --radius-lg:28px;
-    --radius-md:18px;
-    --radius-sm:10px;
+    --plum-hi:#8a6b90;
+    --plum-dark:#4A3750;
+    --plum-deep:#352A39;
+    --plum-tint:#E9E0EA;
+    --plum-soft:#8E7A92;
+    --ink:#2E2432;
+    --radius-lg:34px;
+    --radius-md:22px;
+    --radius-sm:14px;
     --maxw:1180px;
   }
 
@@ -31,343 +37,399 @@
     background:var(--cream);
     color:var(--ink);
     font-family:'Manrope',sans-serif;
-    font-size:18px;
-    line-height:1.6;
+    font-weight:400;
+    line-height:1.55;
     -webkit-font-smoothing:antialiased;
   }
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;}
-    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
-  }
-
-  h1,h2,h3,.display{
-    font-family:'Baloo 2',sans-serif;
-    font-weight:700;
-    color:var(--ink);
-    margin:0;
-    line-height:1.05;
+  h1,h2,h3,.wordmark,.stat-num{
+    font-family:'Fredoka',sans-serif;
+    font-weight:600;
+    color:var(--plum-dark);
+    margin:0; 
     letter-spacing:-0.01em;
   }
-
-  a{color:inherit;}
-  img,svg{max-width:100%;display:block;}
-  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 32px;}
+  p{margin:0;}
+  a{color:inherit;text-decoration:none;}
+  img,svg{display:block;max-width:100%;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
   section{scroll-margin-top:84px;}
+  ::selection{background:var(--plum);color:var(--cream);}
 
-  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible{
-    outline:3px solid var(--plum-deep);
-    outline-offset:2px;
+  /* ---------- focus ---------- */
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{
+    outline:2.5px solid var(--plum-dark);
+    outline-offset:3px;
+    border-radius:6px;
   }
 
-  /* ---------- Buttons ---------- */
+  /* ---------- buttons ---------- */
   .btn{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:14px 26px;
+    display:inline-flex;align-items:center;gap:8px;
+    padding:13px 26px;
     border-radius:999px;
     font-family:'Manrope',sans-serif;
     font-weight:700;
-    font-size:16px;
-    text-decoration:none;
-    border:2px solid transparent;
+    font-size:15.5px;
     cursor:pointer;
-    transition:transform .15s ease, background .15s ease, color .15s ease, border-color .15s ease;
+    border:2px solid transparent;
+    transition:transform .18s ease, background .18s ease, color .18s ease, border-color .18s ease;
   }
   .btn:hover{transform:translateY(-2px);}
-  .btn-primary{background:var(--plum); color:var(--cream);}
-  .btn-primary:hover{background:var(--plum-deep);}
-  .btn-ghost{background:transparent; color:var(--plum-deep); border-color:var(--plum-deep);}
-  .btn-ghost:hover{background:var(--plum-deep); color:var(--cream);}
-  .btn-on-dark{background:var(--cream); color:var(--plum-deep);}
-  .btn-on-dark:hover{background:var(--plum-tint-2);}
-  .btn-ghost-on-dark{background:transparent; color:var(--cream); border-color:rgba(255,249,239,.5);}
-  .btn-ghost-on-dark:hover{background:rgba(255,249,239,.12); border-color:var(--cream);}
+  .btn-primary{background:var(--plum-dark);color:var(--cream);}
+  .btn-primary:hover{background:var(--plum);}
+  .btn-ghost{background:transparent;color:var(--plum-dark);border-color:var(--plum-dark);}
+  .btn-ghost:hover{background:var(--plum-dark);color:var(--cream);}
+  .btn-onplum{background:var(--cream);color:var(--plum-deep);}
+  .btn-onplum:hover{background:var(--cream-dim);}
+  .btn-ghost-onplum{background:transparent;color:var(--cream);border-color:rgba(255,249,239,.55);}
+  .btn-ghost-onplum:hover{background:rgba(255,249,239,.12);border-color:var(--cream);}
 
-  /* ---------- Nav ---------- */
+  /* ---------- nav ---------- */
   header{
-    position:sticky; top:0; z-index:100;
-    background:var(--plum);
+    position:sticky;top:0;z-index:100;
+    background:rgba(255,249,239,.9);
+    backdrop-filter:blur(10px);
+    border-bottom:1.5px solid var(--plum-tint);
   }
-  .navbar{
-    display:flex; align-items:center; justify-content:space-between;
-    padding:16px 32px;
-    max-width:var(--maxw); margin:0 auto;
-  }
-  .logo{
-    font-family:'Baloo 2',sans-serif;
-    font-weight:700;
-    font-size:22px;
-    color:var(--cream);
-    text-decoration:none;
-    display:flex;
-    flex-direction:column;
-    line-height:0.92;
-    letter-spacing:-0.01em;
-  }
-  .logo .dot{color:var(--plum-tint);}
-
-  nav.main-nav{display:flex; align-items:center; gap:4px;}
+  .navbar{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;max-width:var(--maxw);margin:0 auto;}
+  .wordmark{font-size:22px;line-height:1;}
+  .wordmark span{color:var(--plum);}
+  nav.primary-nav{display:flex;align-items:center;gap:2px;}
   .nav-item{position:relative;}
   .nav-link{
-    display:inline-block;
+    display:flex;align-items:center;gap:5px;
     padding:10px 14px;
-    color:var(--cream);
-    text-decoration:none;
-    font-weight:600;
-    font-size:15.5px;
-    border-radius:999px;
-    transition:background .15s ease;
-  }
-  .nav-link:hover, .nav-item:hover > .nav-link{background:rgba(255,249,239,.14);}
-
-  .dropdown{
-    position:absolute; top:calc(100% + 8px); left:0;
-    background:var(--cream-soft);
-    border-radius:var(--radius-md);
-    box-shadow:0 18px 40px rgba(43,34,48,.22);
-    padding:10px;
-    min-width:220px;
-    opacity:0; visibility:hidden; transform:translateY(6px);
-    transition:opacity .16s ease, transform .16s ease, visibility .16s ease;
-  }
-  .nav-item:hover .dropdown, .nav-item:focus-within .dropdown{
-    opacity:1; visibility:visible; transform:translateY(0);
-  }
-  .dropdown a{
-    display:block;
-    padding:10px 14px;
-    border-radius:var(--radius-sm);
-    color:var(--ink);
-    text-decoration:none;
-    font-weight:600;
+    font-weight:700;
     font-size:15px;
+    color:var(--plum-dark);
+    border-radius:999px;
+    background:transparent;
+    border:none;
+    font-family:'Manrope',sans-serif;
+    cursor:pointer;
   }
-  .dropdown a:hover{background:var(--plum-tint-2); color:var(--plum-deep);}
-
-  .nav-cta{margin-left:8px;}
-
-  .hamburger{
+  .nav-item:hover > .nav-link, .nav-link[aria-expanded="true"]{background:var(--plum-tint);}
+  .nav-link .caret{width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .2s ease;}
+  .nav-link[aria-expanded="true"] .caret{transform:rotate(-135deg) translateY(1px);}
+  .dropdown{
+    position:absolute;top:calc(100% + 10px);left:0;
+    background:var(--cream);
+    border:1.5px solid var(--plum-tint);
+    border-radius:var(--radius-sm);
+    box-shadow:0 18px 40px -18px rgba(53,42,57,.35);
+    padding:8px;
+    min-width:200px;
     display:none;
-    background:none; border:none; cursor:pointer;
-    width:40px; height:40px;
-    padding:0;
-    flex-direction:column; justify-content:center; align-items:center; gap:5px;
+    flex-direction:column;
   }
-  .hamburger span{width:22px; height:2.5px; background:var(--cream); border-radius:2px; transition:transform .2s ease, opacity .2s ease;}
-  .hamburger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg);}
-  .hamburger.open span:nth-child(2){opacity:0;}
-  .hamburger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg);}
+  .dropdown.open{display:flex;}
+  .dropdown a{
+    padding:10px 14px;border-radius:10px;font-weight:600;font-size:14.5px;color:var(--ink);
+  }
+  .dropdown a:hover{background:var(--plum-tint);color:var(--plum-dark);}
+  .nav-cta{display:flex;align-items:center;gap:10px;}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;}
+  .burger span{width:24px;height:2.5px;background:var(--plum-dark);border-radius:2px;}
 
   .mobile-panel{display:none;}
+  /* ---------- floating project CTA ---------- */
+  .floating-project{
+    position:fixed;
+    right:28px;
+    top:50%;
+    z-index:150;
+    transform:translateY(-50%);
+    box-shadow:0 14px 30px -16px rgba(53,42,57,.55);
+    animation:floatProject 3.2s ease-in-out infinite;
+  }
+  .floating-project:hover{
+    transform:translateY(calc(-50% - 3px));
+  }
+  @keyframes floatProject{
+    0%,100%{transform:translateY(-50%);}
+    50%{transform:translateY(calc(-50% - 10px));}
+  }
+  @media (max-width:900px){
+    .floating-project{
+      right:16px;
+      top:auto;
+      bottom:18px;
+      transform:none;
+      animation:floatProjectMobile 3.2s ease-in-out infinite;
+    }
+    .floating-project:hover{transform:translateY(-3px);}
+  }
+  @keyframes floatProjectMobile{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+  }
 
-  @media (max-width: 940px){
-    nav.main-nav, .nav-cta.desktop-only{display:none;}
-    .hamburger{display:flex;}
+  @media (max-width:900px){
+    nav.primary-nav, .nav-cta .btn-ghost{display:none;}
+    .burger{display:flex;}
     .mobile-panel{
       display:block;
-      max-height:0;
-      overflow:hidden;
-      background:var(--plum-deep);
-      transition:max-height .28s ease;
+      max-height:0;overflow:hidden;
+      transition:max-height .3s ease;
+      background:var(--cream);
+      border-top:1.5px solid var(--plum-tint);
     }
-    .mobile-panel.open{max-height:640px; overflow-y:auto;}
-    .mobile-panel .inner{padding:8px 32px 26px;}
-    .m-link{
-      display:block; color:var(--cream); text-decoration:none;
-      font-weight:700; font-size:17px; padding:14px 0;
-      border-bottom:1px solid rgba(255,249,239,.14);
-    }
-    .m-sub{padding-left:14px; display:none;}
-    .m-sub.open{display:block;}
-    .m-sub a{
-      display:block; color:var(--plum-tint); text-decoration:none;
-      font-weight:600; font-size:15px; padding:10px 0;
-    }
-    .m-toggle{display:flex; align-items:center; justify-content:space-between; width:100%; background:none; border:none; cursor:pointer;}
-    .m-caret{color:var(--cream); font-size:14px; transition:transform .2s ease;}
-    .m-toggle[aria-expanded="true"] .m-caret{transform:rotate(180deg);}
-    .m-cta{margin-top:18px;}
+    .mobile-panel.open{max-height:640px;overflow-y:auto;}
+    .mobile-panel .wrap{padding:14px 28px 22px;display:flex;flex-direction:column;gap:2px;}
+    .m-top{display:flex;justify-content:space-between;align-items:center;padding:12px 6px;font-weight:700;font-size:15.5px;color:var(--plum-dark);border-radius:10px;}
+    .m-top:hover{background:var(--plum-tint);}
+    .m-sub{display:none;flex-direction:column;padding-left:14px;margin-bottom:6px;}
+    .m-sub.open{display:flex;}
+    .m-sub a{padding:9px 6px;font-size:14.5px;font-weight:600;color:var(--plum-soft);}
+    .m-caret{width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);transition:transform .2s ease;}
+    .m-top[aria-expanded="true"] .m-caret{transform:rotate(-135deg);}
+    .m-cta{margin-top:10px;}
   }
 
-  /* ---------- Hero ---------- */
-  .hero{
+  /* ---------- hero ---------- */
+  .hero{padding:88px 0 60px;}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;}
+  .tagpills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px;}
+  .pill{
+    font-size:13px;font-weight:700;color:var(--plum-dark);
+    background:var(--plum-tint);padding:6px 14px;border-radius:999px;
+  }
+  .hero h1{font-size:clamp(34px,4.6vw,58px);line-height:1.06;}
+  .hero-lead{margin-top:22px;font-size:18px;color:var(--plum-dark);max-width:46ch;}
+  .hero-actions{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;}
+
+  /* funnel graphic */
+  .funnel-wrap{position:relative;display:flex;justify-content:center;}
+  .funnel{position:relative;width:100%;max-width:380px;height:380px;}
+  .funnel-layer{position:absolute;left:50%;transform:translateX(-50%);border-radius:80px;}
+  .fl1{top:0;width:340px;height:110px;background:var(--plum-tint);}
+  .fl2{top:100px;width:250px;height:110px;background:var(--plum-hi);opacity:.85;}
+  .fl3{top:200px;width:160px;height:110px;background:var(--plum-dark);}
+  .fl4{top:300px;width:78px;height:78px;border-radius:50%;background:var(--plum-deep);}
+  .funnel-dot{
+    position:absolute;left:50%;top:-14px;width:14px;height:14px;border-radius:50%;
     background:var(--cream);
-    padding:88px 0 64px;
-    overflow:hidden;
+    transform:translateX(-50%);
+    animation:dropthru 3.2s cubic-bezier(.6,0,.4,1) infinite;
   }
-  .hero .wrap{
-    display:grid;
-    grid-template-columns:1.05fr 0.85fr;
-    gap:48px;
-    align-items:center;
+  .funnel-dot:nth-child(2){animation-delay:1.05s;}
+  .funnel-dot:nth-child(3){animation-delay:2.1s;}
+  @keyframes dropthru{
+    0%{top:-14px;opacity:0;}
+    8%{opacity:1;}
+    92%{opacity:1;}
+    100%{top:352px;opacity:0;}
   }
-  .hero h1{font-size:56px;}
-  .hero p.lede{
-    margin-top:22px;
-    max-width:52ch;
-    font-size:19px;
-    color:var(--ink-soft);
+  @media (prefers-reduced-motion:reduce){
+    .funnel-dot{animation:none;top:170px;opacity:.9;}
   }
-  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-top:32px;}
-  .stat-row{display:flex; gap:34px; margin-top:52px; flex-wrap:wrap;}
-  .stat b{
-    display:block; font-family:'Baloo 2',sans-serif; font-size:28px; color:var(--plum-deep);
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;}
+    .funnel-wrap{order:-1;}
+    .funnel{max-width:260px;height:270px;}
+    .fl1{width:230px;height:76px;}
+    .fl2{top:68px;width:168px;height:76px;}
+    .fl3{top:136px;width:108px;height:76px;}
+    .fl4{top:204px;width:56px;height:56px;}
   }
-  .stat span{font-size:14.5px; color:var(--ink-soft);}
 
-  .funnel-art{width:100%; height:auto;}
+  /* ---------- section shell ---------- */
+  .section{padding:84px 0;}
+  .section-alt{background:var(--cream-dim);}
+  .section-head{max-width:64ch;margin-bottom:44px;}
+  .section-head h2{font-size:clamp(28px,3.4vw,40px);line-height:1.12;}
+  .section-head p{margin-top:14px;font-size:17px;color:var(--plum-dark);}
 
-  /* ---------- Section shells ---------- */
-  .section{padding:88px 0;}
-  .section.tint{background:var(--plum-tint);}
-  .section-head{max-width:56ch; margin-bottom:48px;}
-  .section-head h2{font-size:38px;}
-  .section-head p{margin-top:14px; color:var(--ink-soft); font-size:17.5px;}
-
-  /* ---------- Cards: industries / templates / services ---------- */
-  .grid-4{display:grid; grid-template-columns:repeat(4,1fr); gap:22px;}
-  .grid-2{display:grid; grid-template-columns:repeat(2,1fr); gap:22px;}
-  .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
-
-  .card{
-    background:var(--cream-soft);
+  /* ---------- what we do ---------- */
+  .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .cat-card{
+    background:var(--cream);
     border:1.5px solid var(--plum-tint);
-    border-radius:var(--radius-lg);
-    padding:30px 26px;
-  }
-  .section.tint .card{background:var(--cream);}
-  .card h3{font-size:22px; margin-bottom:10px;}
-  .card p{color:var(--ink-soft); font-size:15.5px; margin:0;}
-  .card .tag{
-    display:inline-block;
-    font-family:'Manrope',sans-serif;
-    font-weight:700;
-    font-size:13px;
-    color:var(--plum-deep);
-    background:var(--plum-tint-2);
-    padding:5px 12px;
-    border-radius:999px;
-    margin-bottom:16px;
-  }
-  .section.tint .card .tag{background:var(--plum-tint);}
-
-  .card-link{
-    display:inline-flex; align-items:center; gap:6px;
-    margin-top:18px; font-weight:700; font-size:14.5px; color:var(--plum-deep);
-    text-decoration:none;
-  }
-
-  /* Templates */
-  .tpl-card{position:relative; overflow:hidden;}
-  .tpl-swatch{
-    height:120px;
     border-radius:var(--radius-md);
-    margin-bottom:18px;
-    background:linear-gradient(135deg, var(--plum) 0%, var(--plum-mid) 100%);
+    padding:26px 22px;
+    scroll-margin-top:110px;
+    transition:border-color .2s ease, transform .2s ease;
   }
-  .tpl-price{font-family:'Baloo 2',sans-serif; color:var(--plum-deep); font-size:20px; margin-top:14px;}
+  .cat-card:hover{border-color:var(--plum);transform:translateY(-4px);}
+  .cat-icon{width:46px;height:46px;border-radius:14px;background:var(--plum-tint);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+  .cat-icon svg{width:24px;height:24px;stroke:var(--plum-dark);}
+  .cat-card h3{font-size:19px;margin-bottom:8px;}
+  .cat-card p{font-size:14.5px;color:var(--plum-soft);}
+  .flash{animation:flashcard 1.4s ease;}
+  @keyframes flashcard{
+    0%{background:var(--plum-tint);}
+    100%{background:var(--cream);}
+  }
 
-  /* Portfolio */
-  .portfolio-card{
-    border-radius:var(--radius-lg);
-    padding:0;
+  /* ---------- templates ---------- */
+  .tpl-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .tpl-card{
+    display:block;
+    border-radius:var(--radius-md); 
     overflow:hidden;
+    border:1.5px solid var(--plum-tint);
+    background:var(--cream);
+    scroll-margin-top:110px;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .tpl-card:hover{transform:translateY(-4px);box-shadow:0 22px 40px -24px rgba(53,42,57,.4);}
+  .tpl-preview{height:150px;position:relative;overflow:hidden;}
+  .tpl-preview .bar{position:absolute;top:0;left:0;right:0;height:22px;display:flex;align-items:center;gap:5px;padding:0 10px;}
+  .tpl-preview .bar span{width:6px;height:6px;border-radius:50%;background:rgba(255,249,239,.55);}
+  .tpl-body{padding:18px 20px 20px;}
+  .tpl-body .k{font-size:12.5px;font-weight:700;color:var(--plum-soft);}
+  .tpl-body h3{font-size:18px;margin-top:4px;}
+  .tpl-body p{font-size:14px;color:var(--plum-soft);margin-top:6px;}
+
+  /* ---------- pricing ---------- */
+  .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .price-card{background:var(--cream);border:1.5px solid var(--plum-tint);border-radius:var(--radius-md);padding:28px 24px;display:flex;flex-direction:column;}
+  .price-card.mid{background:var(--plum-dark);border-color:var(--plum-dark);}
+  .price-card.mid *{color:var(--cream) !important;}
+  .price-level{font-size:12.5px;font-weight:700;color:var(--plum-soft);}
+  .price-card h3{font-size:20px;margin-top:6px;}
+  .price-range{font-family:'Fredoka',sans-serif;font-size:25px;color:var(--plum-dark);margin-top:12px;}
+  .price-desc{font-size:14.5px;color:var(--plum-soft);margin-top:10px;}
+
+  .flow-strip{margin-top:52px;border-top:1.5px solid var(--plum-tint);padding-top:34px;}
+  .flow-strip .flabel{font-size:13px;font-weight:700;color:var(--plum-soft);margin-bottom:18px;}
+  .flow-steps{display:flex;align-items:center;gap:0;flex-wrap:wrap;}
+  .flow-step{background:var(--cream);border:1.5px solid var(--plum-tint);border-radius:16px;padding:14px 18px;font-size:14px;font-weight:600;color:var(--plum-dark);max-width:220px;}
+  .flow-arrow{width:26px;height:2px;background:var(--plum-tint);position:relative;flex:0 0 26px;margin:0 2px;}
+  .flow-arrow::after{content:"";position:absolute;right:-1px;top:-4px;border-left:6px solid var(--plum-tint);border-top:5px solid transparent;border-bottom:5px solid transparent;}
+
+  /* ---------- services ---------- */
+  .svc-list{display:flex;flex-direction:column;border-top:1.5px solid var(--plum-tint);}
+  .svc-row{
+    display:grid;grid-template-columns:1.1fr 2fr;gap:32px;
+    padding:34px 0;border-bottom:1.5px solid var(--plum-tint);
+    scroll-margin-top:110px;
+  }
+  .svc-row h3{font-size:23px;}
+  .svc-row .desc p{font-size:15.5px;color:var(--plum-dark);max-width:56ch;}
+  .svc-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+  .svc-tags span{font-size:13px;font-weight:700;color:var(--plum);background:var(--plum-tint);padding:5px 12px;border-radius:999px;}
+
+  /* ---------- portfolio ---------- */
+  .pf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .pf-card{border-radius:var(--radius-md);overflow:hidden;border:1.5px solid var(--plum-tint);background:var(--cream);}
+  .pf-shot{height:170px;display:flex;align-items:flex-end;padding:16px;}
+  .pf-shot .chip{background:rgba(255,249,239,.85);color:var(--plum-deep);font-size:12.5px;font-weight:700;padding:5px 12px;border-radius:999px;}
+  .pf-info{padding:16px 18px 20px;}
+  .pf-info h3{font-size:16.5px;}
+  .pf-info p{font-size:13.5px;color:var(--plum-soft);margin-top:4px;}
+
+  /* ---------- resources ---------- */
+  .res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .res-card{
+    border-radius:var(--radius-md);
     background:var(--cream);
     border:1.5px solid var(--plum-tint);
+    padding:24px;
+    display:flex;flex-direction:column;gap:14px;
+    min-height:190px;
   }
-  .portfolio-thumb{
-    height:190px;
-    display:flex; align-items:flex-end;
-    padding:18px;
-  }
-  .portfolio-thumb span{
-    background:rgba(255,249,239,.9);
-    color:var(--plum-deep);
-    font-weight:700; font-size:13px;
-    padding:5px 12px; border-radius:999px;
-  }
-  .portfolio-body{padding:20px 22px 26px;}
-  .portfolio-body h3{font-size:19px; margin-bottom:6px;}
-  .portfolio-body p{color:var(--ink-soft); font-size:14.5px; margin:0;}
+  .res-tag{font-size:12.5px;font-weight:700;color:var(--plum);}
+  .res-card h3{font-size:18px;}
+  .res-card p{font-size:14px;color:var(--plum-soft);}
+  .res-link{margin-top:auto;font-weight:700;font-size:14px;color:var(--plum-dark);}
 
-  /* Resources */
-  .resource-card{
-    display:flex; flex-direction:column; height:100%;
+  /* ---------- contact ---------- */
+  .contact-section{background:var(--plum-deep);color:var(--cream);}
+  .contact-section h2, .contact-section h3{color:var(--cream);}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
+  .contact-lead{font-size:17px;color:rgba(255,249,239,.78);max-width:44ch;margin-top:14px;}
+  .contact-detail{margin-top:32px;display:flex;flex-direction:column;gap:16px;}
+  .contact-detail .row{display:flex;flex-direction:column;gap:2px;}
+  .contact-detail .row .k{font-size:12.5px;font-weight:700;color:rgba(255,249,239,.55);}
+  .contact-detail .row .v{font-size:16px;font-weight:600;}
+  form.cform{display:flex;flex-direction:column;gap:14px;}
+  .cform .two{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .cform label{font-size:13px;font-weight:700;color:rgba(255,249,239,.7);margin-bottom:6px;display:block;}
+  .cform input,.cform select,.cform textarea{
+    width:100%;padding:12px 14px;border-radius:12px;border:1.5px solid rgba(255,249,239,.25);
+    background:rgba(255,249,239,.06);color:var(--cream);font-family:'Manrope',sans-serif;font-size:14.5px;
   }
-  .resource-card .num{
-    font-family:'Baloo 2',sans-serif; font-size:15px; color:var(--plum-mid); margin-bottom:14px;
-  }
+  .cform input::placeholder,.cform textarea::placeholder{color:rgba(255,249,239,.4);}
+  .cform textarea{min-height:110px;resize:vertical;}
+  .cform button{margin-top:6px;align-self:flex-start;}
 
-  /* ---------- Contact ---------- */
-  .contact{
-    background:var(--plum-deep);
-    color:var(--cream);
-  }
-  .contact .section-head h2, .contact .section-head p{color:var(--cream);}
-  .contact .section-head p{color:rgba(255,249,239,.8);}
-  .contact-grid{
-    display:grid;
-    grid-template-columns:0.9fr 1.1fr;
-    gap:56px;
-    align-items:start;
-  }
-  .contact-info h3{color:var(--cream); font-size:20px; margin-bottom:14px;}
-  .contact-info p{color:rgba(255,249,239,.78); font-size:15.5px;}
-  .contact-info a{color:var(--cream); font-weight:700; text-decoration:none; border-bottom:2px solid rgba(255,249,239,.4);}
-  .info-block{margin-bottom:28px;}
+  /* ---------- footer ---------- */
+  footer{background:var(--plum-deep);border-top:1px solid rgba(255,249,239,.12);padding:34px 0;color:rgba(255,249,239,.6);}
+  .foot-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+  .foot-wordmark{color:var(--cream);font-size:18px;}
+  .foot-links{display:flex;gap:20px;flex-wrap:wrap;font-size:13.5px;font-weight:600;}
+  .foot-links a:hover{color:var(--cream);}
 
-  form{
-    background:var(--cream);
-    border-radius:var(--radius-lg);
-    padding:32px;
+  @media (max-width:980px){
+    .cat-grid,.tpl-grid{grid-template-columns:repeat(2,1fr);}
+    .pf-grid,.res-grid{grid-template-columns:repeat(2,1fr);}
+    .svc-row{grid-template-columns:1fr;gap:12px;}
+    .contact-grid{grid-template-columns:1fr;gap:40px;}
+    .price-grid{grid-template-columns:1fr;}
+    .flow-steps{flex-direction:column;align-items:flex-start;}
+    .flow-arrow{width:2px;height:22px;margin:2px 0 2px 20px;}
+    .flow-arrow::after{right:-4px;top:auto;bottom:-1px;left:auto;border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid var(--plum-tint);}
+    .flow-step{max-width:100%;}
   }
-  .field{margin-bottom:18px;}
-  .field label{
-    display:block; font-weight:700; font-size:14.5px; color:var(--ink); margin-bottom:7px;
-  }
-  .field input, .field select, .field textarea{
-    width:100%;
-    padding:13px 15px;
-    border-radius:var(--radius-sm);
-    border:1.5px solid var(--plum-tint);
-    background:var(--cream-soft);
-    font-family:'Manrope',sans-serif;
-    font-size:15.5px;
-    color:var(--ink);
-  }
-  .field textarea{resize:vertical; min-height:100px;}
-  .field input:focus, .field select:focus, .field textarea:focus{border-color:var(--plum);}
-  #formNote{margin-top:14px; font-size:14.5px; color:var(--plum-deep); display:none;}
-  #formNote.show{display:block;}
-
-  /* ---------- Footer ---------- */
-  footer{background:var(--plum-deep); border-top:1px solid rgba(255,249,239,.14); padding:44px 0 30px;}
-  .footer-top{display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; margin-bottom:34px;}
-  .footer-nav{display:flex; gap:34px; flex-wrap:wrap;}
-  .footer-nav a{color:rgba(255,249,239,.8); text-decoration:none; font-size:14.5px; font-weight:600;}
-  .footer-nav a:hover{color:var(--cream);}
-  .footer-logo{font-family:'Baloo 2',sans-serif; font-weight:700; font-size:22px; color:var(--cream);}
-  .footer-bottom{color:rgba(255,249,239,.5); font-size:13.5px; border-top:1px solid rgba(255,249,239,.14); padding-top:22px;}
-
-  /* ---------- Responsive ---------- */
-  @media (max-width: 940px){
-    .hero .wrap{grid-template-columns:1fr;}
-    .hero{padding:56px 0 48px;}
-    .hero h1{font-size:40px;}
-    .funnel-art{order:-1; max-width:280px; margin:0 auto 8px;}
-    .grid-4{grid-template-columns:repeat(2,1fr);}
-    .grid-3{grid-template-columns:1fr;}
-    .grid-2{grid-template-columns:1fr;}
-    .contact-grid{grid-template-columns:1fr;}
+  @media (max-width:600px){
+    .cat-grid,.tpl-grid,.pf-grid,.res-grid{grid-template-columns:1fr;}
+    .cform .two{grid-template-columns:1fr;}
     .section{padding:60px 0;}
-    .section-head h2{font-size:30px;}
-    .wrap{padding:0 22px;}
-    .navbar{padding:14px 22px;}
-    .stat-row{gap:24px;}
+    .hero{padding:52px 0 40px;}
   }
-  @media (max-width: 520px){
-    .grid-4{grid-template-columns:1fr;}
+
+  /* ---------- floating project button ---------- */
+  .floating-project-btn{
+    position:fixed;
+    right:24px;
+    bottom:24px;
+    z-index:9999;
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding:13px 18px 13px 15px;
+    background:var(--plum-dark);
+    color:var(--cream);
+    border:1.5px solid rgba(255,249,239,.18);
+    border-radius:999px;
+    box-shadow:0 12px 30px rgba(53,42,57,.25);
+    font-family:'Manrope',sans-serif;
+    font-size:14px;
+    font-weight:800;
+    white-space:nowrap;
+    transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+    animation:floatProject 3s ease-in-out infinite;
+  }
+  .floating-project-btn::before{
+    content:"";
+    width:9px;
+    height:9px;
+    border-radius:50%;
+    background:var(--cream);
+    box-shadow:0 0 0 4px rgba(255,249,239,.12);
+  }
+  .floating-project-btn:hover{
+    background:var(--plum);
+    transform:translateY(-4px) scale(1.02);
+    box-shadow:0 16px 36px rgba(53,42,57,.32);
+    animation-play-state:paused;
+  }
+  .floating-project-btn:active{transform:translateY(-1px) scale(.99);}
+  @keyframes floatProject{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-6px);}
+  }
+  @media (max-width:600px){
+    .floating-project-btn{
+      right:16px;
+      bottom:16px;
+      padding:12px 16px 12px 14px;
+      font-size:13.5px;
+    }
+  }
+  @media (prefers-reduced-motion:reduce){
+    .floating-project-btn{animation:none;}
   }
 </style>
 </head>
@@ -375,356 +437,481 @@
 
 <header>
   <div class="navbar">
-    <a href="#home" class="logo">studio<span class="dot">·</span>chuba</a>
+    <a href="#home" class="wordmark">studio<span>chuba</span></a>
 
-    <nav class="main-nav" aria-label="Primary">
+    <nav class="primary-nav" aria-label="Primary">
       <div class="nav-item"><a class="nav-link" href="#home">Home</a></div>
+
       <div class="nav-item">
-        <a class="nav-link" href="#what-we-do">What We Do</a>
-        <div class="dropdown">
+        <button class="nav-link" aria-expanded="false" data-dd="wwd">What We Do <span class="caret"></span></button>
+        <div class="dropdown" data-dd-panel="wwd">
           <a href="#wwd-beauty">Beauty</a>
           <a href="#wwd-realestate">Real Estate</a>
           <a href="#wwd-cars">Cars</a>
           <a href="#wwd-digital">Digital Products</a>
         </div>
       </div>
+
       <div class="nav-item">
-        <a class="nav-link" href="#templates">Templates</a>
-        <div class="dropdown">
+        <button class="nav-link" aria-expanded="false" data-dd="tpl">Templates <span class="caret"></span></button>
+        <div class="dropdown" data-dd-panel="tpl">
           <a href="#tpl-beauty">Beauty</a>
           <a href="#tpl-realestate">Real Estate</a>
           <a href="#tpl-cars">Cars</a>
           <a href="#tpl-business">Business</a>
         </div>
       </div>
+
       <div class="nav-item">
-        <a class="nav-link" href="#services">Services</a>
-        <div class="dropdown">
-          <a href="#svc-custom">Custom Funnels</a>
-          <a href="#svc-landing">Landing Pages</a>
-          <a href="#svc-website">Website Design</a>
-          <a href="#svc-setup">Funnel Setup</a>
+        <button class="nav-link" aria-expanded="false" data-dd="svc">Services <span class="caret"></span></button>
+        <div class="dropdown" data-dd-panel="svc">
+          <a href="#svc-custom-funnels">Custom Funnels</a>
+          <a href="#svc-landing-pages">Landing Pages</a>
+          <a href="#svc-website-design">Website Design</a>
+          <a href="#svc-funnel-setup">Funnel Setup</a>
         </div>
       </div>
+
+      <div class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></div>
       <div class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></div>
       <div class="nav-item"><a class="nav-link" href="#resources">Resources</a></div>
-      <div class="nav-item"><a class="nav-link" href="#contact">Contact</a></div>
     </nav>
 
-    <a href="#contact" class="btn btn-on-dark nav-cta desktop-only">Book a call</a>
-    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-ghost">Contact</a>
+      <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 
   <div class="mobile-panel" id="mobilePanel">
-    <div class="inner">
-      <a class="m-link" href="#home">Home</a>
+    <div class="wrap">
+      <a class="m-top" href="#home">Home</a>
 
-      <button class="m-toggle" aria-expanded="false" data-target="m-wwd"><span class="m-link" style="border:none;padding:14px 0 0;">What We Do</span><span class="m-caret">▾</span></button>
-      <div class="m-sub" id="m-wwd">
+      <button class="m-top" data-msub="wwd" aria-expanded="false">What We Do <span class="m-caret"></span></button>
+      <div class="m-sub" data-msub-panel="wwd">
         <a href="#wwd-beauty">Beauty</a>
         <a href="#wwd-realestate">Real Estate</a>
         <a href="#wwd-cars">Cars</a>
         <a href="#wwd-digital">Digital Products</a>
       </div>
 
-      <button class="m-toggle" aria-expanded="false" data-target="m-tpl"><span class="m-link" style="border:none;padding:14px 0 0;">Templates</span><span class="m-caret">▾</span></button>
-      <div class="m-sub" id="m-tpl">
+      <button class="m-top" data-msub="tpl" aria-expanded="false">Templates <span class="m-caret"></span></button>
+      <div class="m-sub" data-msub-panel="tpl">
         <a href="#tpl-beauty">Beauty</a>
         <a href="#tpl-realestate">Real Estate</a>
         <a href="#tpl-cars">Cars</a>
         <a href="#tpl-business">Business</a>
       </div>
 
-      <button class="m-toggle" aria-expanded="false" data-target="m-svc"><span class="m-link" style="border:none;padding:14px 0 0;">Services</span><span class="m-caret">▾</span></button>
-      <div class="m-sub" id="m-svc">
-        <a href="#svc-custom">Custom Funnels</a>
-        <a href="#svc-landing">Landing Pages</a>
-        <a href="#svc-website">Website Design</a>
-        <a href="#svc-setup">Funnel Setup</a>
+      <button class="m-top" data-msub="svc" aria-expanded="false">Services <span class="m-caret"></span></button>
+      <div class="m-sub" data-msub-panel="svc">
+        <a href="#svc-custom-funnels">Custom Funnels</a>
+        <a href="#svc-landing-pages">Landing Pages</a>
+        <a href="#svc-website-design">Website Design</a>
+        <a href="#svc-funnel-setup">Funnel Setup</a>
       </div>
 
-      <a class="m-link" href="#portfolio">Portfolio</a>
-      <a class="m-link" href="#resources">Resources</a>
-      <a class="m-link" href="#contact" style="border-bottom:none;">Contact</a>
-
-      <a href="#contact" class="btn btn-on-dark m-cta" style="width:100%; justify-content:center;">Book a call</a>
+      <a class="m-top" href="#pricing">Pricing</a>
+      <a class="m-top" href="#portfolio">Portfolio</a>
+      <a class="m-top" href="#resources">Resources</a>
+      <a class="m-top" href="#contact">Contact</a>
+      <a href="#contact" class="btn btn-primary m-cta">Start a project</a>
     </div>
   </div>
 </header>
 
+<a href="#contact" class="floating-project-btn" aria-label="Start a project">Start a project <span aria-hidden="true">→</span></a>
+
 <main>
 
-  <!-- HERO -->
+  <!-- HOME -->
   <section class="hero" id="home">
-    <div class="wrap">
+    <div class="wrap hero-grid">
       <div>
-        <h1>The page that turns a scroll into a sale.</h1>
-        <p class="lede">Studio Chuba designs and builds funnels, landing pages, and websites for beauty brands, real estate agents, car dealers, and digital creators — built to convert, not just look good.</p>
-        <div class="hero-ctas">
-          <a href="#contact" class="btn btn-primary">Book a funnel audit</a>
-          <a href="#templates" class="btn btn-ghost">Browse templates</a>
+        <div class="tagpills">
+          <span class="pill">Beauty</span>
+          <span class="pill">Real Estate</span>
+          <span class="pill">Cars</span>
+          <span class="pill">Digital Products</span>
         </div>
-        <div class="stat-row">
-          <div class="stat"><b>40+</b><span>funnels launched</span></div>
-          <div class="stat"><b>4</b><span>industries served</span></div>
-          <div class="stat"><b>2 wks</b><span>average turnaround</span></div>
+        <h1>Build better. Look premium. Sell smarter.</h1>
+        <p class="hero-lead">Studio Chuba is four specialized departments under one studio — Beauty, Real Estate, Cars, and Digital — each built to fix the one thing costing that industry sales: poor presentation, scattered leads, hard-to-browse inventory, or no way to package what you know.</p>
+        <div class="hero-actions">
+          <a href="#portfolio" class="btn btn-primary">See our work</a>
+          <a href="#contact" class="btn btn-ghost">Start a project</a>
         </div>
       </div>
-
-      <svg class="funnel-art" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a funnel made of layered rounded shapes">
-        <circle cx="210" cy="120" r="150" fill="#EAE1E9"/>
-        <circle cx="210" cy="170" r="120" fill="#C6ABC8"/>
-        <circle cx="210" cy="220" r="90" fill="#8B6E8F"/>
-        <circle cx="210" cy="270" r="60" fill="#705575"/>
-        <circle cx="210" cy="320" r="30" fill="#4A3B4E"/>
-        <circle cx="210" cy="320" r="9" fill="#FFF9EF"/>
-      </svg>
+      <div class="funnel-wrap">
+        <div class="funnel" aria-hidden="true">
+          <div class="funnel-layer fl1"></div>
+          <div class="funnel-layer fl2"></div>
+          <div class="funnel-layer fl3"></div>
+          <div class="funnel-layer fl4"></div>
+          <div class="funnel-dot"></div>
+          <div class="funnel-dot"></div>
+          <div class="funnel-dot"></div>
+        </div>
+      </div> 
     </div>
   </section>
-   
+
+  <!-- WHAT WE DO -->
+  <section class="section section-alt" id="what-we-do">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Four branches, one studio</h2>
+        <p>Each branch is built around one industry's actual sales problem — not a generic website template.</p>
+      </div>
+      <div class="cat-grid">
+        <div class="cat-card" id="wwd-beauty">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 3c2 3 4 5 4 8a4 4 0 0 1-8 0c0-3 2-5 4-8Z"/><path d="M8 19h8"/></svg></div>
+          <h3>Beauty</h3>
+          <p>For skincare brands, salons, and lash and makeup artists whose online presence undersells them. We build sales and booking funnels that fill calendars, not just collect emails.</p>
+        </div>
+        <div class="cat-card" id="wwd-realestate">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 11 12 4l8 7"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/></svg></div>
+          <h3>Real Estate</h3>
+          <p>For realtors, developers, and property companies whose leads are scattered across social media. We build property lead funnels that qualify buyers before they ever call.</p>
+        </div>
+        <div class="cat-card" id="wwd-cars">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 16V12l2-5h12l2 5v4"/><circle cx="7.5" cy="16.5" r="1.5"/><circle cx="16.5" cy="16.5" r="1.5"/></svg></div>
+          <h3>Cars</h3>
+          <p>For dealers and importers whose buyers can't easily view or ask about inventory. We build car sales funnels that turn listings into enquiries.</p>
+        </div>
+        <div class="cat-card" id="wwd-digital">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h5"/></svg></div>
+          <h3>Digital Products</h3>
+          <p>For creators and small businesses who don't know how to package or sell what they know. We build digital products and templates they can sell on repeat.</p>
+        </div>
+      </div> 
+    </div> 
+  </section>
+
   <!-- TEMPLATES -->
-  <section class="section tint" id="templates">
+  <section class="section" id="templates">
     <div class="wrap">
       <div class="section-head">
         <h2>Templates</h2>
-        <p>Not ready for a custom build? Start from a template made for your industry and launch in days, not weeks.</p>
+        <p>Ready-built funnel and page templates, based on what's already converting in each industry. Buy one and edit it yourself, or have us take it further — see how that works below.</p>
       </div>
-      <div class="grid-4">
-        <div class="card tpl-card" id="tpl-beauty">
-          <div class="tpl-swatch"></div>
-          <h3>Beauty</h3>
-          <p>Booking-first pages for salons, lash and brow bars, and product launches.</p>
-          <a href="#contact" class="card-link">View templates</a>
+      <div class="tpl-grid">
+        <a class="tpl-card" id="tpl-beauty" href="beauty.html">
+          <div class="tpl-preview" style="background:linear-gradient(160deg,#E9D9DE,#C9A6B4);">
+            <div class="bar"><span></span><span></span><span></span></div>
+          </div>
+          <div class="tpl-body">
+            <div class="k">TEMPLATE</div>
+            <h3>Beauty</h3>
+            <p>Booking-first layout with before/after gallery and service tiers.</p>
+          </div>
+        </a>
+        <div class="tpl-card" id="tpl-realestate">
+          <div class="tpl-preview" style="background:linear-gradient(160deg,#DCE3D8,#A9BFA0);">
+            <div class="bar"><span></span><span></span><span></span></div>
+          </div>
+          <div class="tpl-body">
+            <div class="k">TEMPLATE</div>
+            <h3>Real Estate</h3>
+            <p>Listing showcase with map, virtual tour slot, and inquiry capture.</p>
+          </div>
         </div>
-        <div class="card tpl-card" id="tpl-realestate">
-          <div class="tpl-swatch"></div>
-          <h3>Real Estate</h3>
-          <p>Listing and open-house pages built to capture serious buyer leads.</p>
-          <a href="#contact" class="card-link">View templates</a>
+        <div class="tpl-card" id="tpl-cars">
+          <div class="tpl-preview" style="background:linear-gradient(160deg,#DDE2EC,#A7B4CE);">
+            <div class="bar"><span></span><span></span><span></span></div>
+          </div>
+          <div class="tpl-body">
+            <div class="k">TEMPLATE</div>
+            <h3>Cars</h3>
+            <p>Inventory grid with financing calculator and test-drive scheduler.</p>
+          </div>
         </div>
-        <div class="card tpl-card" id="tpl-cars">
-          <div class="tpl-swatch"></div>
-          <h3>Cars</h3>
-          <p>Dealership and financing-offer pages built for test-drive bookings.</p>
-          <a href="#contact" class="card-link">View templates</a>
+        <div class="tpl-card" id="tpl-business">
+          <div class="tpl-preview" style="background:linear-gradient(160deg,#EAE2CF,#D2BE8F);">
+            <div class="bar"><span></span><span></span><span></span></div>
+          </div>
+          <div class="tpl-body">
+            <div class="k">TEMPLATE</div>
+            <h3>Business</h3>
+            <p>Services overview with case studies and a discovery-call booking flow.</p>
+          </div>
         </div>
-        <div class="card tpl-card" id="tpl-business">
-          <div class="tpl-swatch"></div>
-          <h3>Business</h3>
-          <p>General service and consulting pages for any growing business.</p>
-          <a href="#contact" class="card-link">View templates</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="pricing">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Three ways to work with us</h2>
+        <p>Every branch works the same way — start with a template, have us customize it, or hand us the whole build.</p>
+      </div>
+      <div class="price-grid">
+        <div class="price-card">
+          <span class="price-level">LEVEL 1</span>
+          <h3>Templates</h3>
+          <div class="price-range">₦5,000–₦30,000</div>
+          <p class="price-desc">Buy a ready-made funnel and edit it yourself. Good if you just need a strong starting point.</p>
+        </div>
+        <div class="price-card mid">
+          <span class="price-level">LEVEL 2</span>
+          <h3>Customized</h3>
+          <div class="price-range">₦50,000–₦150,000</div>
+          <p class="price-desc">We take a template and rebuild it around your business — your photos, your offer, your brand.</p>
+        </div>
+        <div class="price-card">
+          <span class="price-level">LEVEL 3</span>
+          <h3>Done-for-you</h3>
+          <div class="price-range">₦150,000–₦500,000+</div>
+          <p class="price-desc">We build the entire funnel from scratch — copy, forms, WhatsApp, payment — and launch it for you.</p>
+        </div>
+      </div>
+
+      <div class="flow-strip">
+        <div class="flabel">HOW IT USUALLY STARTS</div>
+        <div class="flow-steps">
+          <div class="flow-step">Someone finds a Studio Chuba template online</div>
+          <div class="flow-arrow"></div>
+          <div class="flow-step">They buy it and try it themselves</div>
+          <div class="flow-arrow"></div>
+          <div class="flow-step">They ask us to customize it for their business</div>
+          <div class="flow-arrow"></div>
+          <div class="flow-step">They become a done-for-you client</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- SERVICES -->
-  <section class="section" id="services">
+  <section class="section section-alt" id="services">
     <div class="wrap">
       <div class="section-head">
         <h2>Services</h2>
-        <p>Pick what your project needs — one page, a full funnel, or the tools that connect them.</p>
+        <p>From a single landing page to a full funnel rebuild — each available as a template, a customization, or a done-for-you build.</p>
       </div>
-      <div class="grid-4">
-        <div class="card" id="svc-custom">
+      <div class="svc-list">
+        <div class="svc-row" id="svc-custom-funnels">
           <h3>Custom Funnels</h3>
-          <p>A full multi-step funnel, designed and built around one offer, from first click to close.</p>
+          <div class="desc">
+            <p>End-to-end funnel builds — from the first ad click to the follow-up sequence — designed around how your specific offer sells.</p>
+            <div class="svc-tags"><span>Strategy</span><span>Build</span><span>Follow-up flows</span></div>
+          </div>
         </div>
-        <div class="card" id="svc-landing">
+        <div class="svc-row" id="svc-landing-pages">
           <h3>Landing Pages</h3>
-          <p>One focused, high-converting page for a single launch, offer, or campaign.</p>
+          <div class="desc">
+            <p>Single-purpose pages built to do one job well: get the click, the booking, or the sign-up, with nothing in the way.</p>
+            <div class="svc-tags"><span>Copywriting</span><span>Design</span><span>Mobile-first</span></div>
+          </div>
         </div>
-        <div class="card" id="svc-website">
+        <div class="svc-row" id="svc-website-design">
           <h3>Website Design</h3>
-          <p>A complete site for your brand — built to represent you well beyond the funnel.</p>
+          <div class="desc">
+            <p>Full websites for brands that need more than a single page — built to hold up as the front door to everything else you sell.</p>
+            <div class="svc-tags"><span>Brand-led</span><span>Multi-page</span><span>SEO-ready</span></div>
+          </div>
         </div>
-        <div class="card" id="svc-setup">
+        <div class="svc-row" id="svc-funnel-setup">
           <h3>Funnel Setup</h3>
-          <p>The technical wiring — payments, email automation, and tools connected to a funnel you already have.</p>
+          <div class="desc">
+            <p>Already have a funnel platform? We audit, wire up, and optimize what you have — tracking, automations, and offer stack included.</p>
+            <div class="svc-tags"><span>Audit</span><span>Automation</span><span>Optimization</span></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- PORTFOLIO -->
-  <section class="section tint" id="portfolio">
+  <section class="section" id="portfolio">
     <div class="wrap">
       <div class="section-head">
         <h2>Portfolio</h2>
-        <p>A few of the funnels and sites we've built recently.</p>
+        <p>A look at the kind of work we build across each industry we serve.</p>
       </div>
-      <div class="grid-3">
-        <div class="portfolio-card">
-          <div class="portfolio-thumb" style="background:linear-gradient(135deg,#705575,#8B6E8F);"><span>Beauty</span></div>
-          <div class="portfolio-body">
-            <h3>Glow Lab Skincare</h3>
-            <p>Product-launch funnel that sold out three restocks in a week.</p>
-          </div>
+      <div class="pf-grid">
+        <div class="pf-card">
+          <div class="pf-shot" style="background:linear-gradient(160deg,#E9D9DE,#8a6b90);"><span class="chip">Beauty</span></div>
+          <div class="pf-info"><h3>Lash studio booking funnel</h3><p>Instagram to booked appointment in three steps.</p></div>
         </div>
-        <div class="portfolio-card">
-          <div class="portfolio-thumb" style="background:linear-gradient(135deg,#4A3B4E,#705575);"><span>Real Estate</span></div>
-          <div class="portfolio-body">
-            <h3>Harper &amp; Co. Realty</h3>
-            <p>Listing funnel built around a single high-traffic open house.</p>
-          </div>
+        <div class="pf-card">
+          <div class="pf-shot" style="background:linear-gradient(160deg,#DCE3D8,#705575);"><span class="chip">Real Estate</span></div>
+          <div class="pf-info"><h3>New-development listing site</h3><p>Pre-launch waitlist funnel for a 40-unit build.</p></div>
         </div>
-        <div class="portfolio-card">
-          <div class="portfolio-thumb" style="background:linear-gradient(135deg,#8B6E8F,#C6ABC8);"><span>Digital Products</span></div>
-          <div class="portfolio-body">
-            <h3>The Creator Course</h3>
-            <p>Evergreen course funnel with a self-liquidating lead offer.</p>
-          </div>
+        <div class="pf-card">
+          <div class="pf-shot" style="background:linear-gradient(160deg,#DDE2EC,#4A3750);"><span class="chip">Cars</span></div>
+          <div class="pf-info"><h3>Dealership inventory funnel</h3><p>Financing pre-qualification before the lot visit.</p></div>
+        </div>
+        <div class="pf-card">
+          <div class="pf-shot" style="background:linear-gradient(160deg,#EAE2CF,#705575);"><span class="chip">Digital Products</span></div>
+          <div class="pf-info"><h3>Cohort course checkout</h3><p>Waitlist-to-cart flow for a 6-week program.</p></div>
+        </div>
+        <div class="pf-card">
+          <div class="pf-shot" style="background:linear-gradient(160deg,#E9D9DE,#4A3750);"><span class="chip">Beauty</span></div>
+          <div class="pf-info"><h3>Skincare line pre-order page</h3><p>Single-product launch page, sold out in 48 hours.</p></div>
+        </div>
+        <div class="pf-card">
+          <div class="pf-shot" style="background:linear-gradient(160deg,#DCE3D8,#4A3750);"><span class="chip">Real Estate</span></div>
+          <div class="pf-info"><h3>Agent personal brand site</h3><p>Listings, testimonials, and a booked-call funnel.</p></div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- RESOURCES -->
-  <section class="section" id="resources">
+  <section class="section section-alt" id="resources">
     <div class="wrap">
       <div class="section-head">
         <h2>Resources</h2>
-        <p>Notes from what we've learned building funnels across four different industries.</p>
+        <p>Notes from the funnels we build and rebuild — free to read, no funnel required.</p>
       </div>
-      <div class="grid-3">
-        <div class="card resource-card">
-          <span class="num">Guide</span>
-          <h3>The 5-page funnel, broken down</h3>
-          <p>What each page needs to do, and why most funnels only need five.</p>
-          <a href="#contact" class="card-link">Read the guide</a>
+      <div class="res-grid">
+        <div class="res-card">
+          <div class="res-tag">GUIDE</div>
+          <h3>The funnel audit checklist</h3>
+          <p>The exact list we run through before touching a single page on an existing funnel.</p>
+          <span class="res-link">Read the guide</span>
         </div>
-        <div class="card resource-card">
-          <span class="num">Guide</span>
-          <h3>What actually makes a page convert</h3>
-          <p>The handful of decisions that move a visitor toward "yes."</p>
-          <a href="#contact" class="card-link">Read the guide</a>
+        <div class="res-card">
+          <div class="res-tag">PRICING</div>
+          <h3>Revenue-share vs. flat fee</h3>
+          <p>How to decide which pricing model actually makes sense for your funnel build.</p>
+          <span class="res-link">Read the guide</span>
         </div>
-        <div class="card resource-card">
-          <span class="num">Guide</span>
-          <h3>Choosing between a template and a custom build</h3>
-          <p>How to know which one your offer actually needs right now.</p>
-          <a href="#contact" class="card-link">Read the guide</a>
+        <div class="res-card">
+          <div class="res-tag">PLAYBOOK</div>
+          <h3>Scaling a funnel agency</h3>
+          <p>What changes operationally once you move from one-off builds to ongoing accounts.</p>
+          <span class="res-link">Read the guide</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section class="section contact" id="contact">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Let's build your funnel</h2>
-        <p>Tell us about your offer and your industry — we'll get back to you within a day with next steps.</p>
+  <section class="section contact-section" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <h2>Let's build your funnel.</h2>
+        <p class="contact-lead">Tell us what you sell and who you sell it to. We'll follow up with next steps within one business day.</p>
+        <div class="contact-detail">
+          <div class="row"><span class="k">EMAIL</span><span class="v">hello@studiochuba.com</span></div>
+          <div class="row"><span class="k">WHATSAPP</span><span class="v">+234 800 000 0000</span></div>
+          <div class="row"><span class="k">RESPONSE TIME</span><span class="v">Within 1 business day</span></div>
+        </div>
+        <a href="#" class="btn btn-ghost-onplum" style="margin-top:24px;">Message us on WhatsApp</a>
       </div>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <div class="info-block">
-            <h3>Email</h3>
-            <p><a href="mailto:hello@studiochuba.com">hello@studiochuba.com</a></p>
+      <form class="cform" onsubmit="event.preventDefault();">
+        <div class="two">
+          <div>
+            <label for="cf-name">Name</label>
+            <input id="cf-name" type="text" placeholder="Your name" required>
           </div>
-          <div class="info-block">
-            <h3>Based in</h3>
-            <p>Lagos, Nigeria — working with clients everywhere.</p>
-          </div>
-          <div class="info-block">
-            <h3>Response time</h3>
-            <p>We reply to every project inquiry within one business day.</p>
+          <div>
+            <label for="cf-email">Email</label>
+            <input id="cf-email" type="email" placeholder="you@email.com" required>
           </div>
         </div>
-
-        <form id="contactForm">
-          <div class="field">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="field">
-            <label for="project">Project type</label>
-            <select id="project" name="project">
-              <option>Custom Funnel</option>
-              <option>Landing Page</option>
-              <option>Website Design</option>
-              <option>Funnel Setup</option>
-              <option>Template</option>
-              <option>Not sure yet</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="message">Tell us about your offer</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send message</button>
-          <p id="formNote">Thanks — your message is in. We'll reply within a business day.</p>
-        </form>
-      </div>
+        <div>
+          <label for="cf-industry">Industry</label>
+          <select id="cf-industry">
+            <option>Beauty</option>
+            <option>Real Estate</option>
+            <option>Cars</option>
+            <option>Digital Products</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div>
+          <label for="cf-msg">What are you looking to build?</label>
+          <textarea id="cf-msg" placeholder="A quick sentence or two is plenty."></textarea>
+        </div>
+        <button type="submit" class="btn btn-onplum">Send message</button>
+      </form>
     </div>
   </section>
 
 </main>
 
 <footer>
-  <div class="wrap">
-    <div class="footer-top">
-      <span class="footer-logo">studio·chuba</span>
-      <nav class="footer-nav" aria-label="Footer">
-        <a href="#home">Home</a>
-        <a href="#what-we-do">What We Do</a>
-        <a href="#templates">Templates</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#resources">Resources</a>
-        <a href="#contact">Contact</a>
-      </nav>
+  <div class="wrap foot-grid">
+    <a href="#home" class="wordmark foot-wordmark">studio chuba</a>
+    <div class="foot-links">
+      <a href="#what-we-do">What We Do</a>
+      <a href="#templates">Templates</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#resources">Resources</a>
+      <a href="#contact">Contact</a>
     </div>
-    <div class="footer-bottom">
-      © 2026 Studio Chuba. Funnels, landing pages, and websites for brands that sell.
-    </div>
+    <span>© 2026 Studio Chuba</span>
   </div>
 </footer>
 
 <script>
-  // Mobile menu toggle
-  const hamburgerBtn = document.getElementById('hamburgerBtn');
-  const mobilePanel = document.getElementById('mobilePanel');
-  hamburgerBtn.addEventListener('click', () => {
-    const isOpen = mobilePanel.classList.toggle('open');
-    hamburgerBtn.classList.toggle('open', isOpen);
-    hamburgerBtn.setAttribute('aria-expanded', isOpen);
+  // desktop dropdowns
+  document.querySelectorAll('[data-dd]').forEach(function(btn){
+    var key = btn.getAttribute('data-dd');
+    var panel = document.querySelector('[data-dd-panel="'+key+'"]');
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      var isOpen = panel.classList.contains('open');
+      document.querySelectorAll('.dropdown.open').forEach(function(p){p.classList.remove('open');});
+      document.querySelectorAll('.nav-link[aria-expanded="true"]').forEach(function(b){b.setAttribute('aria-expanded','false');});
+      if(!isOpen){
+        panel.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+  document.addEventListener('click', function(){
+    document.querySelectorAll('.dropdown.open').forEach(function(p){p.classList.remove('open');});
+    document.querySelectorAll('.nav-link[aria-expanded="true"]').forEach(function(b){b.setAttribute('aria-expanded','false');});
   });
 
-  // Mobile submenu accordions
-  document.querySelectorAll('.m-toggle').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const target = document.getElementById(btn.dataset.target);
-      const isOpen = target.classList.toggle('open');
-      btn.setAttribute('aria-expanded', isOpen);
+  // mobile burger
+  var burger = document.getElementById('burgerBtn');
+  var mpanel = document.getElementById('mobilePanel');
+  burger.addEventListener('click', function(){
+    var open = mpanel.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true':'false');
+  });
+
+  // mobile accordions
+  document.querySelectorAll('[data-msub]').forEach(function(btn){
+    var key = btn.getAttribute('data-msub');
+    var panel = document.querySelector('[data-msub-panel="'+key+'"]');
+    btn.addEventListener('click', function(){
+      var isOpen = panel.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true':'false');
     });
   });
 
-  // Close mobile menu after tapping a link
-  document.querySelectorAll('.mobile-panel a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobilePanel.classList.remove('open');
-      hamburgerBtn.classList.remove('open');
-      hamburgerBtn.setAttribute('aria-expanded', 'false');
+  // close mobile menu after nav click
+  mpanel.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      mpanel.classList.remove('open');
+      burger.setAttribute('aria-expanded','false');
     });
   });
 
-  // Contact form demo submission
-  const contactForm = document.getElementById('contactForm');
-  const formNote = document.getElementById('formNote');
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    formNote.classList.add('show');
-    contactForm.querySelectorAll('input, select, textarea').forEach(el => el.disabled = true);
-    contactForm.querySelector('button[type="submit"]').textContent = 'Sent';
-  });
+  // flash the target card when arriving via a dropdown/anchor link
+  function flashTarget(){
+    var id = window.location.hash.replace('#','');
+    if(!id) return;
+    var el = document.getElementById(id);
+    if(el && (el.classList.contains('cat-card') || el.classList.contains('tpl-card') || el.classList.contains('svc-row'))){
+      el.classList.remove('flash');
+      void el.offsetWidth;
+      el.classList.add('flash');
+    }
+  }
+  window.addEventListener('hashchange', flashTarget);
+  window.addEventListener('load', flashTarget);
 </script>
 
 </body>
-</html>
+</html> 
