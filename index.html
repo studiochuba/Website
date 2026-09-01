@@ -207,28 +207,7 @@
   .section-alt{background:var(--cream-dim);}
   .section-head{max-width:64ch;margin-bottom:44px;}
   .section-head h2{font-size:clamp(28px,3.4vw,40px);line-height:1.12;}
-  .section-head p{margin-top:14px;font-size:17px;color:var(--plum-dark);}
-
-  /* ---------- what we do ---------- */
-  .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
-  .cat-card{
-    background:var(--cream);
-    border:1.5px solid var(--plum-tint);
-    border-radius:var(--radius-md);
-    padding:26px 22px;
-    scroll-margin-top:110px;
-    transition:border-color .2s ease, transform .2s ease;
-  }
-  .cat-card:hover{border-color:var(--plum);transform:translateY(-4px);}
-  .cat-icon{width:46px;height:46px;border-radius:14px;background:var(--plum-tint);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
-  .cat-icon svg{width:24px;height:24px;stroke:var(--plum-dark);}
-  .cat-card h3{font-size:19px;margin-bottom:8px;}
-  .cat-card p{font-size:14.5px;color:var(--plum-soft);}
-  .flash{animation:flashcard 1.4s ease;}
-  @keyframes flashcard{
-    0%{background:var(--plum-tint);}
-    100%{background:var(--cream);}
-  }
+  .section-head p{margin-top:14px;font-size:17px;color:var(--plum-dark);} 
 
   /* ---------- templates ---------- */
   .tpl-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
@@ -333,17 +312,7 @@
     <a href="#home" class="wordmark">studio<span>chuba</span></a>
 
     <nav class="primary-nav" aria-label="Primary">
-      <div class="nav-item"><a class="nav-link" href="#home">Home</a></div>
-
-      <div class="nav-item">
-        <button class="nav-link" aria-expanded="false" data-dd="wwd">What We Do <span class="caret"></span></button>
-        <div class="dropdown" data-dd-panel="wwd">
-          <a href="#wwd-beauty">Beauty</a>
-          <a href="#wwd-realestate">Real Estate</a>
-          <a href="#wwd-cars">Cars</a>
-          <a href="#wwd-digital">Digital Products</a>
-        </div>
-      </div>
+      <div class="nav-item"><a class="nav-link" href="#home">Home</a></div> 
 
       <div class="nav-item">
         <button class="nav-link" aria-expanded="false" data-dd="tpl">Templates <span class="caret"></span></button>
@@ -380,15 +349,7 @@
 
   <div class="mobile-panel" id="mobilePanel">
     <div class="wrap">
-      <a class="m-top" href="#home">Home</a>
-
-      <button class="m-top" data-msub="wwd" aria-expanded="false">What We Do <span class="m-caret"></span></button>
-      <div class="m-sub" data-msub-panel="wwd">
-        <a href="#wwd-beauty">Beauty</a>
-        <a href="#wwd-realestate">Real Estate</a>
-        <a href="#wwd-cars">Cars</a>
-        <a href="#wwd-digital">Digital Products</a>
-      </div>
+      <a class="m-top" href="#home">Home</a> 
 
       <button class="m-top" data-msub="tpl" aria-expanded="false">Templates <span class="m-caret"></span></button>
       <div class="m-sub" data-msub-panel="tpl">
@@ -651,8 +612,7 @@
 <footer>
   <div class="wrap foot-grid">
     <a href="#home" class="wordmark foot-wordmark">studio chuba</a>
-    <div class="foot-links">
-      <a href="#what-we-do">What We Do</a>
+    <div class="foot-links"> 
       <a href="#templates">Templates</a>
       <a href="#services">Services</a>
       <a href="#portfolio">Portfolio</a>

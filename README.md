@@ -483,39 +483,7 @@
       </svg>
     </div>
   </section>
-
-  <!-- WHAT WE DO -->
-  <section class="section" id="what-we-do">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>What we do</h2>
-        <p>Every industry converts differently. We build funnels that speak the language of yours, from the first tap to the checkout screen.</p>
-      </div>
-      <div class="grid-4">
-        <div class="card" id="wwd-beauty">
-          <span class="tag">Beauty</span>
-          <h3>Beauty &amp; personal care</h3>
-          <p>Skincare drops, lash bars, and braid studios — funnels that fill the booking calendar and sell out product launches.</p>
-        </div>
-        <div class="card" id="wwd-realestate">
-          <span class="tag">Real Estate</span>
-          <h3>Real estate</h3>
-          <p>Listing pages, open-house funnels, and lead capture that puts agents in front of buyers who are actually ready.</p>
-        </div>
-        <div class="card" id="wwd-cars">
-          <span class="tag">Cars</span>
-          <h3>Automotive</h3>
-          <p>Dealership pages and financing funnels that move a test drive into a signature, without the back and forth.</p>
-        </div>
-        <div class="card" id="wwd-digital">
-          <span class="tag">Digital Products</span>
-          <h3>Digital products</h3>
-          <p>Courses, ebooks, and coaching offers packaged into a page built to sell while you're doing anything else.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
+   
   <!-- TEMPLATES -->
   <section class="section tint" id="templates">
     <div class="wrap">
